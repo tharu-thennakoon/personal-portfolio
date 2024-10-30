@@ -95,6 +95,44 @@ footer p{
     margin: 0;
 }
 
+.social-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 27px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0; /* Initial background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.social-icons img {
+    width: 20px; /* Icon size within the rounded background */
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #ecf0f1; /* Hover background color (LinkedIn blue as example) */
+    transform: translateY(-5px); /* Adds lift effect on hover */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.15); /* Slightly enlarges the icon */
+}
+
+
+
 /* Responsive Footer */
 @media (max-width: 768px) {
     footer {
@@ -175,6 +213,9 @@ footer p{
     color: #ddd;
 }
 
+
+
+
 /* Skills Section */
 .skills-section {
     background-color: #444;
@@ -224,18 +265,23 @@ footer p{
 }
 
 .project-box {
-    background-color: #444;
+    background-color: #8a6f6f;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    
+}
+
+.project-content {
+    max-width: 70%; /* Adjust width of text area */
 }
 
 .project-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-box h3 {
@@ -263,6 +309,12 @@ footer p{
 
 .project-box a:hover {
     background-color: #c0392b;
+}
+
+.project-image {
+    width: 150px; /* Adjust image width */
+    height: auto;
+    border-radius: 5px;
 }
 
 /* Contact Section */
