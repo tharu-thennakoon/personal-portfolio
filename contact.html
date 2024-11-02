@@ -10,38 +10,58 @@
     <!-- Navigation Bar -->
     <header>
         <div class="navbar">
-            <h1>Portfo<span class="highlight">lio.</span></h1>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or would like to get in touch, please fill out the form below.</p>
+                <form action="#" method="post" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or would like to get in touch, please fill out the form below.</p>
-            <form action="#" method="post" class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
 
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+                <!-- Social Media Links -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/tharushi.tharushi.79677471?mibextid=ZbWKwL" target="_blank">
+                        <img src="../images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/tharu.u_/profilecard/?igsh=c3pkamo2YTVsa204" target="_blank">
+                        <img src="../images/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/tharushi-thennakoon-579ab6280" target="_blank">
+                        <img src="../images/linkdin.jpeg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/tharu-thennakoon" target="_blank">
+                        <img src="../images/github.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
