@@ -140,40 +140,54 @@ footer p{
     margin: 0;
 }
 
+/* Social icons container */
 .social-icons {
     display: flex;
-    gap: 30px;
-    margin-top: 27px;
+    gap: 20px; /* Space between each icon */
     align-items: center;
     justify-content: center;
+    padding: 50px 10px;
+    
 }
 
+/* Each icon link styling */
 .social-icons a {
-    display: inline-block;
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
+    display: inline-flex;
+    width: 45px; /* Adjust icon size */
+    height: 45px;
+    gap: 20px;
     border-radius: 50%;
-    background-color: #f5efef; /* Initial background color */
-    display: flex;
+    background-color: #ffffff; /* White background color */
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds shadow for depth */
 }
 
+/* Icon image styling */
 .social-icons img {
-    width: 20px; /* Icon size within the rounded background */
-    height: 20px;
-    transition: transform 0.3s;
+    width: 24px; /* Icon size */
+    height: 24px;
 }
 
+/* Hover effect */
 .social-icons a:hover {
-    background-color: #ecf0f1; /* Hover background color (LinkedIn blue as example) */
-    transform: translateY(-5px); /* Adds lift effect on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: #f1f1f1; /* Light gray background on hover */
 }
 
-.social-icons a:hover img {
-    transform: scale(1.15); /* Slightly enlarges the icon */
+/* Example color for individual icons (optional) */
+.social-icons a.facebook:hover {
+    background-color: #3b5998; /* Facebook blue */
+}
+.social-icons a.instagram:hover {
+    background-color: #E4405F; /* Instagram color */
+}
+.social-icons a.linkedin:hover {
+    background-color: #0077B5; /* LinkedIn color */
+}
+.social-icons a.github:hover {
+    background-color: #333333; /* GitHub dark color */
 }
 
 
