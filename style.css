@@ -429,7 +429,7 @@ button::before {
 .projects-section {
     padding: 100px;
     text-align: center;
-    background-image: url('../images/projects.jpg');
+    background-image: url('../portfolioweb/images/projects.jpg');
     background-attachment: fixed;
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
