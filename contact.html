@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used (HTML5) -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on different devices -->
+    <title>Personal Portfolio</title> <!-- Defines the title of the webpage shown in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the external CSS file for styling -->
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -12,6 +12,7 @@
         <div class="navbar">
             <nav>
                 <ul>
+                    <!-- List of navigation links for the main sections of the portfolio website -->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -26,37 +27,48 @@
         <!-- Contact Section -->
         <section class="contact-section">
             <div class="container">
-                <h2>Contact Me</h2>
-                <p>If you have any questions or would like to get in touch, please fill out the form below.</p>
+                <h2>Contact Me</h2> <!-- Section title for the contact form -->
+                <p>If you have any questions or would like to get in touch, please fill out the form below.</p> <!-- Introductory text for the form -->
+                
+                <!-- Contact Form -->
                 <form action="#" method="post" class="contact-form">
+                    <!-- Input field for the user's name -->
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
 
+                    <!-- Input field for the user's email with validation for email format -->
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
 
+                    <!-- Input field for the subject of the message -->
                     <label for="subject">Subject</label>
                     <input type="text" id="subject" name="subject" required>
 
+                    <!-- Textarea for the user's message -->
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
 
+                    <!-- Submit button to send the form data -->
                     <button type="submit">Send Message</button>
                 </form>
 
                 <!-- Social Media Links -->
                 <div class="social-icons">
+                    <!-- Facebook link with icon -->
                     <a href="https://www.facebook.com/tharushi.tharushi.79677471?mibextid=ZbWKwL" target="_blank">
-                        <img src="../images/facebook.png" alt="Facebook">
+                        <img src="../portfolioweb/images/facebook.png" alt="Facebook">
                     </a>
+                    <!-- Instagram link with icon -->
                     <a href="https://www.instagram.com/tharu.u_/profilecard/?igsh=c3pkamo2YTVsa204" target="_blank">
-                        <img src="../images/instagram.png" alt="Instagram">
+                        <img src="../portfolioweb/images/instagram.png" alt="Instagram">
                     </a>
+                    <!-- LinkedIn link with icon -->
                     <a href="https://www.linkedin.com/in/tharushi-thennakoon-579ab6280" target="_blank">
-                        <img src="../images/linkdin.jpeg" alt="LinkedIn">
+                        <img src="../portfolioweb/images/linkdin.jpeg" alt="LinkedIn">
                     </a>
+                    <!-- GitHub link with icon -->
                     <a href="https://github.com/tharu-thennakoon" target="_blank">
-                        <img src="../images/github.png" alt="GitHub">
+                        <img src="../portfolioweb/images/github.png" alt="GitHub">
                     </a>
                 </div>
             </div>
@@ -65,6 +77,7 @@
 
     <!-- Footer -->
     <footer>
+        <!-- Footer text displaying copyright information -->
         <p>&copy; 2024 Tharushi Thennakoon. All rights reserved.</p>
     </footer>
 </body>

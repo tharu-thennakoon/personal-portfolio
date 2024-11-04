@@ -1,4 +1,4 @@
-/* Google Fonts */
+/*--------------  Fonts------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap');
 
 /* Rest */
@@ -10,9 +10,66 @@
 
 /* Base Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;  /*--------------  Fonts------------- */
     background-color: #f0f0f0;
 }
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* Specific font for headings */
+    font-weight: 700; /* Bold for headings */
+}
+
+/* --------------------Relational Selector---------------------*/
+h1 + p {
+    margin-top: 0; /* Remove margin for the first paragraph after an h1 */
+}
+
+/* --------------------Keyframes Animations--------------------- */
+/* The slideDown animation smoothly slides an element down while increasing its opacity */
+@keyframes slideDown {
+    0% { /* Start with the element positioned above its normal location and fully transparent */
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% { /* End with the element in its original position and fully opaque */
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* The bounce animation creates a bouncing effect by moving the element up and down at specific intervals */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { /* Positions the element at its original position */
+        transform: translateY(0);
+    }
+    40% { /* Moves the element up slightly for the bounce effect */
+        transform: translateY(-10px);
+    }
+    60% { /* Moves the element up a bit less for a smaller bounce */
+        transform: translateY(-5px);
+    }
+}
+
+/* The fadeIn animation gradually increases an element's opacity from invisible to fully visible */
+@keyframes fadeIn {
+    from { /* Starts with the element fully transparent */
+        opacity: 0;
+    }
+    to { /* Ends with the element fully opaque */
+        opacity: 1;
+    }
+}
+
+/* The rotateProfile animation rotates an element 360 degrees, creating a full circular spin */
+@keyframes rotateProfile {
+    from { /* Starts with the element at its original rotation */
+        transform: rotate(0deg);
+    }
+    to { /* Ends with the element rotated 360 degrees */
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Header Styles */
 header {
@@ -45,6 +102,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/*----------------------Pseudo Elements with Generated Content-------------*/
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -56,10 +114,12 @@ nav ul li a::after {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
+/* Hover Effects */
 nav ul li a:hover {
     color: #e74c3c;
 }
 
+/*-----------------------Pseudo Elements with Generated Content------------------------*/
 nav ul li a:hover::after {
     width: 100%;
     left: 0;
@@ -79,8 +139,10 @@ nav ul li a:hover::after {
         text-align: center;
     }
 
-    nav ul li {
+    /*-----------Child Combinator---------------*/
+    nav ul > li {
         margin: 10px 0;
+        list-style-type: square;
     }
 }
 
@@ -94,7 +156,7 @@ nav ul li a:hover::after {
     }
 }
 
-/* Media Queries for Responsive Design */
+/* -------------------------Media Queries for Responsive Design -------------*/
 @media (max-width: 768px) {
     header {
         flex-direction: column; 
@@ -195,7 +257,7 @@ footer p{
 /* Responsive Footer */
 @media (max-width: 768px) {
     footer {
-        font-size: 12px;        /* Smaller font size on smaller screens */
+        font-size: 12px;        /* --------Smaller font size on smaller screens--------- */
     }
 }
 
@@ -214,7 +276,7 @@ footer p{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* ------Semi-transparent background ------*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,6 +287,7 @@ footer p{
 .content h2 {
     font-size: 36px;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* -----Text shadow --------*/
 }
 
 .content h3 {
@@ -248,16 +311,24 @@ footer p{
     font-weight: bold;
 }
 
+/*User Action Pseudo Class*/
 .btn:hover {
     background-color: #7e1206;
 }
+
+/* Adding an arrow before buttons */
+button::before {
+    content: ' ';
+    margin-right: 5px;
+  }
+  
 
 /* About Section */
 .about-section, .skills-section {
     padding: 60px 20px;
     text-align: center;
     color: #fff;
-    background: linear-gradient(135deg, #1a1615, #35211d);;
+    background: linear-gradient(135deg, #1a1615, #35211d);;/*---------linear-gradient--------------------*/
 }
 
 .about-section h2, .skills-section h2 {
@@ -287,6 +358,7 @@ footer p{
     transition: transform 0.3s; /* Smooth hover effect */
 }
 
+/*----------------------Transforms------------------*/
 .profile-pic:hover {
     transform: scale(1.05); /* Slightly enlarges the image on hover */
 }
@@ -295,11 +367,12 @@ footer p{
 
 .contact-info {
     padding: 15px; /* Padding inside the contact info */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; /*-------------------------- Rounded corners ------------------------*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.contact-info p {
+/* ----------------------Child Combinator ----------------*/
+.contact-info > p {
     margin: 10px 0; /* Margin for each contact line */
     font-size: 14px; /* Font size for contact info */
     display: flex; /* Flexbox for alignment */
@@ -323,6 +396,7 @@ footer p{
     background-color: #423b3b;
 }
 
+/* ---------------------Structural Selector---------------------------- */
 .skills-list {
     list-style: none;
     display: flex;
@@ -340,6 +414,12 @@ footer p{
     font-weight: bold;
 }
 
+/* -------------------Nth Pseudo-class --------------------*/
+.skills-list li:nth-child(odd) {
+    background-color: #c0392b; /* Different color for odd items */
+}
+
+/* Hover Effects for Skills */
 .skills-list li:hover {
     background-color: #c0392b;
     cursor: pointer;
@@ -369,6 +449,7 @@ footer p{
     margin: 0 auto;
 }
 
+/*--------------------------------------------Transition Effects--------------- */
 .project-box {
     background-color: #5f4444;
     color: #fff;
@@ -384,16 +465,20 @@ footer p{
     max-width: 70%; /* Adjust width of text area */
 }
 
+/*---------------------------User Action Pseudo Class-------------------  */
 .project-box:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* Pseudo-elements with Generated Content */
 .project-box h3 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #ffd700;
 }
+
+
 
 .project-box p {
     font-size: 16px;
@@ -450,7 +535,7 @@ footer p{
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(135deg, #c7bbbb, #968181); /* Soft gradient */
+    background: linear-gradient(135deg, #c7bbbb, #968181); /*-------------- gradient -------*/
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -486,7 +571,7 @@ footer p{
     transition: all 0.3s ease;
 }
 
-/* Attribute selectors for specific input fields */
+/* ----------------Attribute selectors for specific input fields------------------- */
 input[name="name"] {
     border-color: #fdfdfd;
     box-shadow: inset 0 1px 3px rgba(52, 152, 219, 0.2);
@@ -525,6 +610,15 @@ textarea[name="message"] {
 textarea[name="message"]:focus {
     border-color: #f5f2ef;
     box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+/* --------------------Validity Pseudo-class -------------------------*/
+.contact-form input:valid {
+    border: 2px solid rgb(113, 204, 226); /* Valid input border */
+}
+
+.contact-form input:invalid {
+    border: 2px solid rgb(180, 45, 45); /* Invalid input border */
 }
 
 /* Button Styling */
